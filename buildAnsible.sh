@@ -23,7 +23,7 @@ if [ $? -ne 0  ]; then
 fi
 
 #version to install
-ansible="4.5.0"
+ansible="2.10"
 
 showNewerPypiAvailable "ansible" $ansible
 

@@ -14,6 +14,7 @@ RUN mkdir /install && \
     apt-get update && \
     apt-get install -y build-essential libffi-dev libssl-dev && \
     python -m pip install --upgrade pip && \
+    export CRYPTOGRAPHY_DONT_BUILD_RUST=1 && \
     pip install --prefix=/install --no-binary :all: ansible==$ansibleVersion cryptography openpyxl mitogen paramiko && \
     pip install --prefix=/install pygit2
 
